@@ -6,13 +6,13 @@ desvio = std(y,0,1); %calcular o desvio padrao
 
 figure(); %criar o grafico das medias com barra de erro
 errorbar(x,ymean,desvio)
-xlabel('x');
-ylabel('y');
+xlabel('tempo');
+ylabel('distancia');
 
 figure() %ajuste linear
 p = polyfit(x,ymean,1) %retorna os coeficientes do ajuste linear
 yfit = polyval(p,x);  %avalia o ajuste linear nos valores de x
 plot(x, ymean, '*k', x, yfit, 'r') %grafico com os dados e o ajuste
-xlabel('x');
-ylabel('y');
-legend('dados','ajuste linear')
+xlabel('tempo');
+ylabel('distancia');
+legend('dados','ajuste linear');
